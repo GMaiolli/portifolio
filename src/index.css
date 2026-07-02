@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Respeita a preferência de sistema por menos animação (acessibilidade) */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  ::selection {
+    background-color: #4a1010;
+    color: #ededea;
+  }
+
+  /* Contorno de foco visível para navegação via teclado */
+  :focus-visible {
+    outline: 2px solid #b3291f;
+    outline-offset: 3px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  body {
+    background-color: #0a0908;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Space Grotesk", sans-serif;
+  }
+  .font-mono {
+    font-family: "JetBrains Mono", monospace;
+  }
+}
+
+/* Elemento de assinatura visual do projeto: cursor de terminal piscando.
+   Usado com moderação, apenas no hero da página inicial. */
+.blinking-cursor {
+  display: inline-block;
+  width: 0.55ch;
+  background-color: #b3291f;
+  animation: caret-blink 1.1s steps(1) infinite;
+}
+
+/* Efeito interativo 2: brilho que segue o cursor do mouse nos cards de projeto.
+   As variáveis --mx e --my são atualizadas via JavaScript em TiltCard.jsx */
+.tilt-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 150ms ease-out;
+}
+
+.tilt-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    220px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(140, 28, 28, 0.16),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 200ms ease;
+  pointer-events: none;
+}
+
+.tilt-card:hover::before {
+  opacity: 1;
+}
+
+/* Efeito interativo 1: revelação de conteúdo ao rolar a página (scroll reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,8 @@
+# robots.txt
+# Libera a indexação de todo o site para os motores de busca.
+# Ao publicar o site, atualize a linha "Sitemap" abaixo com o domínio final.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://[SEU_DOMINIO_AQUI]/sitemap.xml
