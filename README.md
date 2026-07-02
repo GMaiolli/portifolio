@@ -3,6 +3,8 @@
 Portfólio pessoal desenvolvido para a atividade MAPA de Programação Front-End.
 Tema escuro, minimalista, com detalhes em vermelho escuro.
 
+Site hospedado: https://maiolli.vercel.app/
+
 ## Antes de entregar: o que preencher
 
 Este projeto já vem funcional, mas com **dados de exemplo** que precisam ser
@@ -50,16 +52,11 @@ src/
 └── index.css       # Estilos globais e tokens de design
 ```
 
-## Publicando o site (opcional)
+## Site hospedado
 
-O projeto é 100% estático após o `npm run build`, então pode ser hospedado
-gratuitamente em:
+O projeto está disponível em:
 
-- **Vercel** - `vercel.com`, importe o repositório do GitHub e faça o deploy.
-- **Netlify** - `netlify.com`, arraste a pasta `dist/` gerada pelo build ou
-  conecte o repositório.
-- **GitHub Pages** - publique o conteúdo da pasta `dist/` na branch
-  `gh-pages` do repositório.
+- https://maiolli.vercel.app/
 
 ## Tecnologias utilizadas
 
