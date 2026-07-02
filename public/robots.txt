@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portifolio-blond-alpha-78.vercel.app/sitemap.xml
+Sitemap: https://maiolli.vercel.app/sitemap.xml
