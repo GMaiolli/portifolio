@@ -1,21 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
         // Paleta customizada do projeto: tema escuro com detalhes em vermelho escuro (oxblood).
         // Mantida em variáveis nomeadas para reforçar consistência visual em todo o site.
-        bg: "#0a0908",
-        surface: "#131110",
-        "surface-hover": "#1a1716",
-        border: "#26211f",
-        "border-strong": "#3a302d",
-        ink: "#ededea",
-        muted: "#8f8883",
-        accent: "#8c1c1c",
-        "accent-dim": "#4a1010",
-        "accent-bright": "#b3291f",
+        bg: "#080c1a",
+        surface: "#10162a",
+        "surface-hover": "#171e34",
+        border: "#27304b",
+        "border-strong": "#394362",
+        ink: "#f4f3ff",
+        muted: "#a9b1cc",
+        accent: "#8f75ff",
+        "accent-dim": "#352868",
+        "accent-bright": "#b6a5ff",
       },
       fontFamily: {
         display: ["'Space Grotesk'", "sans-serif"],
@@ -23,7 +23,7 @@ export default {
         mono: ["'JetBrains Mono'", "monospace"],
       },
       maxWidth: {
-        content: "48rem",
+        content: "76rem",
       },
       keyframes: {
         "caret-blink": {
